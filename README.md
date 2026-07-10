@@ -16,11 +16,20 @@ LinkedIn is already the single source of truth for your professional history. Ke
 
 LinkedIn emails you a download link once the archive is ready. Use the "larger" archive specifically: it's the one that includes `messages.csv`, needed to infer your own profile URL for the Contact section.
 
+## Install
+
+```bash
+pipx install linkedin-export-cv
+```
+
+Or `pip install linkedin-export-cv` inside a virtual environment.
+
+> [!NOTE]
+> `cv-to-pdf` depends on [WeasyPrint](https://weasyprint.org/), which needs native libraries (Pango and its dependencies) beyond what pip/pipx installs. On Windows this usually means installing them via MSYS2; some Linux distributions also need system packages. See WeasyPrint's [installation guide](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation) if `cv-to-pdf` fails to import.
+
 ## Usage
 
 ```bash
-pip install -e .
-
 zip-to-cv Complete_LinkedInDataExport.zip
 # review cv.md by hand: LinkedIn exports some locations in Russian
 # (a known bug in their own export, not in this tool)
@@ -39,6 +48,15 @@ Profile, Experience, Education, Certifications, Projects, Skills, Languages — 
 ## PDF
 
 `cv-to-pdf` uses `weasyprint` + `markdown` to render an A4 page with a full-height dark sidebar (Contact, Skills, Languages, Certifications) and a main column (Summary, Experience, Education, Projects), inspired by LinkedIn's own native profile PDF export — the one you get from your profile page by clicking **Resources → Save to PDF**.
+
+## Development
+
+```bash
+git clone https://github.com/AlexisDx13/linkedin-export-cv
+cd linkedin-export-cv
+pip install -e ".[dev]"
+pytest
+```
 
 ## License
 
