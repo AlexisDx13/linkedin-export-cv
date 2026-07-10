@@ -1,6 +1,6 @@
 [project]
 name = "linkedin-export-cv"
-version = "0.1.1"
+version = "0.1.2"
 description = "Generate a Markdown and PDF CV from a LinkedIn data export"
 authors = [{ name = "Alexis Grao Redondo" }]
 readme = "README.md"
