@@ -12,3 +12,10 @@ dist/
 *.zip
 cv.md
 cv.pdf
+
+# Agent setup symlinks -- do not commit; they point outside this repo
+/AGENTS.md
+/CLAUDE.md
+/.agents
+/.codex
+/.claude
