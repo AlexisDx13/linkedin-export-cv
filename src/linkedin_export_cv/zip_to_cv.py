@@ -309,7 +309,7 @@ def build_projects_section(rows: list[dict[str, str]]) -> str:
         return ""
 
     lines = ["## Projects", ""]
-    for row in _newest_first(rows, "Started On", "Finished On"):
+    for row in _newest_first(rows, "Started On", "Finished On", ongoing_is_newest=True):
         title = row.get("Title", "").strip()
         if not title:
             continue
