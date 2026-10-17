@@ -1,5 +1,10 @@
 # linkedin-export-cv
 
+[![PyPI](https://img.shields.io/pypi/v/linkedin-export-cv)](https://pypi.org/project/linkedin-export-cv/)
+[![Python versions](https://img.shields.io/pypi/pyversions/linkedin-export-cv)](https://pypi.org/project/linkedin-export-cv/)
+[![License: MIT](https://img.shields.io/pypi/l/linkedin-export-cv)](LICENSE)
+[![CI](https://github.com/AlexisDx13/linkedin-export-cv/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexisDx13/linkedin-export-cv/actions/workflows/ci.yml)
+
 Generate a Markdown and PDF CV from a LinkedIn data export, reading the zip's CSVs directly.
 
 ## Why
